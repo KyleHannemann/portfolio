@@ -1,0 +1,111 @@
+/* DESKTOP */
+html{
+    scroll-behavior: smooth;
+}
+.root-container{
+    border-radius: 0px;
+    position: absolute;
+    width: 100vw;
+    overflow: scroll;
+    height: fit-content;
+    background: #D7D7D7;
+}
+/* Intro */
+    /* Desktop */
+.intro-container{
+    width: 100vw;
+    height: 100vh;
+    background: #D7D7D7;
+    background: linear-gradient(100deg, #D7D7D7 0%, #D7D7D7 52.9%, black 53%, black 53%);
+    display: flex;
+    flex-direction: row;
+
+}
+.intro-container-left{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 8vw;
+}
+.intro-name, .intro-phrase, .intro-title{
+    font-family: 'Raleway';
+    font-style: normal;
+    
+}
+.intro-name-title-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 10vh;
+}
+.intro-phrase{
+   
+    font-weight: 700;
+    font-size: 30px;
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    color: #000000;
+    padding-bottom: 5vh;
+}
+.intro-name{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 70px;
+    text-align: center;
+    color: #000000;
+}
+.intro-title{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 25px;
+    text-align: center;
+
+    color: #919191;
+}
+.intro-contacts{
+     display: flex;
+     
+}
+.intro-contacts > div{
+    margin-right: 30px;
+    padding: 8px;
+    background: #C4C4C4;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+.intro-container-right{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.intro-picture{
+    width: 300px;
+    height: 500px;
+    background: url(test.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* SKILLS */
+    /* Desktop  */
+    .skills-container{
+        height: 100vh;
+        width: 100vw;
+        
+    }
+
+/* ABOUT ME */
+    /* Desktop */
+.about-container{
+    height: 100vh;
+    width: 100vw;
+    
+}
