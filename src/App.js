@@ -1,6 +1,6 @@
 
 import './App.css';
-import {BsGithub, BsInstagram} from 'react-icons/bs'
+import {BsGithub, BsInstagram, BsLinkedin, BsDownload} from 'react-icons/bs'
 import {AiOutlineMail} from 'react-icons/ai'
 import React, { useRef } from 'react';
 import Navbar from './Components/Navbar';
@@ -18,12 +18,26 @@ function App() {
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
 }, []);
-  console.log(yPostion)
+
+  useEffect(()=>{
+    const sections = document.querySelectorAll('.section')
+    for (let i = 0; i < sections.length; i++){
+      const top = sections[i].offsetTop
+      const height = sections[i].clientHeight
+      if (yPostion > top - (height/3)){
+        setCurrentPage(sections[i].id)
+      }
+    }
+    
+  }, [yPostion])
+
+
+ 
   return (
     <div className='root-container'>
-      <Navbar/>
+      <Navbar active={currentPage}/>
       {/* Intro */}
-      <div id='intro' className='intro-container'>
+      <div id='intro' className='intro-container section'>
         <div className='intro-container-left'>
           <div className='intro-phrase'>Hello, I am</div>
           <div className='intro-name-title-container'>
@@ -33,7 +47,10 @@ function App() {
           <div className='intro-contacts'>
             <div><AiOutlineMail size={50}/></div>
             <div><BsGithub size={50}/></div>
-            <div><BsInstagram size={50}/></div>
+            <div><BsLinkedin size={50}/></div>
+            <div className='resume-download'><BsDownload size={50}/>
+                <span className='resume-download-tooltip'>Download Resume PDF</span>
+            </div>
           </div>
         </div>
         <div className='intro-container-right'>
@@ -41,12 +58,28 @@ function App() {
         </div>
       </div>
     {/* Skills */}
-      <div id='skills' className='skills-container'>
-        
+      <div id='skills' className='skills-container section'>
+        <div className='header'>
+          <span></span>
+          <div>Skills</div>
+          <span></span>
+        </div>
       </div>
     {/* About */}
-      <div id='about' className='about-container'>
-        
+      <div id='about' className='about-container section'>
+      <div className='header'>
+          <span></span>
+          <div>About Me</div>
+          <span></span>
+        </div>
+      </div>
+    {/* Projects */}
+    <div id='projects' className='projects-container section'>
+      <div className='header'>
+          <span></span>
+          <div>Projects</div>
+          <span></span>
+        </div>
       </div>
     </div>
   );
