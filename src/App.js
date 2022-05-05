@@ -46,16 +46,18 @@ function App() {
       {/* Intro */}
       <div id='intro' className='intro-container section'>
         <div className='intro-container-left'>
+          <div className='intro-words-container'>
           <div className='intro-phrase'>Hello, I am</div>
           <div className='intro-name-title-container'>
             <div className='intro-name'>Kyle Hannemann</div>
             <div className='intro-title'>Full Stack Software Developer</div>
           </div>
+          </div>
           <div className='intro-contacts'>
-            <div><AiOutlineMail size={50}/></div>
-            <div><BsGithub size={50}/></div>
-            <div><BsLinkedin size={50}/></div>
-            <div className='resume-download'><BsDownload size={50}/>
+            <div><AiOutlineMail size={'100%'}/></div>
+            <div><BsGithub size={'100%'}/></div>
+            <div><BsLinkedin size={'100%'}/></div>
+            <div className='resume-download'><BsDownload size={'100%'}/>
                 <span className='resume-download-tooltip'>Download Resume PDF</span>
             </div>
           </div>
