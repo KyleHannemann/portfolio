@@ -21,6 +21,7 @@ html{
     width: 100vw;
     height: fit-content;
     padding: 20px;
+    padding-top: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -91,7 +92,7 @@ html{
     font-style: normal;
     font-weight: 700;
     font-size: 70px;
-    text-align: center;
+    text-align: left;
     color: #000000;
 }
 .intro-title{

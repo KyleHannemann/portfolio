@@ -8,6 +8,7 @@
     top: 0px;
     right: 0px;
     width: 100vw;
+    min-height: 45px;
     padding: 5px 10px 5px 10px;
     background-color: black;
     display: flex;
@@ -19,9 +20,9 @@
     font-style: normal;
     font-weight: 700;
     font-size: 17px;
-    padding: 5px 10px 5px 10px;
-    margin-left: 5px;
-    
+    padding: 3px 15px 3px 15px;
+    margin-left: 15px;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -33,11 +34,37 @@
     background: #FFFFFF;
 border: 4px solid #FFFFFF;
 border-radius: 30px;
+
 }
 .navbar-container a:hover{
-    background-color: #FFFFFF;
-    color: black;
-    background: #FFFFFF;
-border: 4px solid #FFFFFF;
-border-radius: 30px;
+    transform: scale(1.25);
+}
+.mobile-menu{
+    display: none;
+}
+/* MOBILE */
+@media (max-width: 600px){
+    .mobile-menu{
+        display: block;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+    }
+    
+    /* Active */
+
+    .navbar-container.active > a{
+        display: flex;
+    }
+    .navbar-container.active{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    /* Collapsed */
+
+    .navbar-container > a{
+        display: none;
+    }
 }

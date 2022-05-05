@@ -10,7 +10,14 @@ import { useState, useEffect } from 'react';
 function App() {
   const [currentPage, setCurrentPage] = useState('intro')
   const [yPostion, setYPostion] = useState(0)
-
+  const [mobile_menu_active, set_mobile_menu_active] = useState(false)
+  const check_navbar_open = (e) => {
+    // console.log(e.target.nodeName)
+    // Add to if statement below if want to exclude menu items e.target.nodeName !== 'A'
+      if (e.target.id !== 'navbar' && mobile_menu_active){
+        set_mobile_menu_active(false)
+      }
+  }
   useEffect(() => {
     const onScroll = () => setYPostion(window.pageYOffset);
     // clean up code
@@ -34,8 +41,8 @@ function App() {
 
  
   return (
-    <div className='root-container'>
-      <Navbar active={currentPage}/>
+    <div className='root-container' onClick={check_navbar_open}>
+      <Navbar set_mobile_menu_active={set_mobile_menu_active} active={currentPage} mobile_active={mobile_menu_active}/>
       {/* Intro */}
       <div id='intro' className='intro-container section'>
         <div className='intro-container-left'>
