@@ -1,6 +1,6 @@
 
 import './App.css';
-import {BsGithub, BsInstagram, BsLinkedin, BsDownload} from 'react-icons/bs'
+import {BsGithub, BsInstagram, BsLinkedin, BsDownload, BsCheck2Circle} from 'react-icons/bs'
 import {AiOutlineMail} from 'react-icons/ai'
 import React, { useRef } from 'react';
 import Navbar from './Components/Navbar';
@@ -80,6 +80,31 @@ function App() {
           <span></span>
           <div>About Me</div>
           <span></span>
+        </div>
+        <div className='section-container about-me'>
+          <div className='about-me-hook'>
+            <h2>Kyle Hannemann</h2>
+              <p> 
+         I am a highly motivated up-and-coming software developer. I love difficult puzzles and problem solving, so when I began learning programming I became obsessed. I am goal oriented and thrive off of overcoming challenges to achieve a desired result. I crave knowledge and feedback in order to continuously improve my skills as a developer.  
+              </p>
+          </div>
+          <div className='about-me-points'>
+            <h2>Why work with me?</h2>
+            <div className='bullet-points'>
+            {['Team Player', 'Self-Starter', 'Reliable', 'Resourceful', 'Versatile', 'Results Driven', 'Clear Communicator'].map((reason)=>{
+                return(
+                  <div>
+                    <div><BsCheck2Circle/></div>
+                    <div>{reason}</div>
+                  </div>
+                )
+              })}
+            </div>
+              
+          </div>
+          <div className='about-me-personal'>
+
+          </div>
         </div>
       </div>
     {/* Projects */}
