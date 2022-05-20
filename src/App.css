@@ -2,6 +2,8 @@
 
 *{
     box-sizing: border-box;
+    font-family: 'Raleway';
+    font-style: normal;
 }
 
 html{
@@ -72,11 +74,7 @@ html{
     justify-content: center;
     padding-left: 8vw;
 }
-.intro-name, .intro-phrase, .intro-title{
-    font-family: 'Raleway';
-    font-style: normal;
-    
-}
+
 .intro-name-title-container{
     display: flex;
     flex-direction: column;
@@ -328,46 +326,118 @@ html{
 .section-container.about-me{
     width: 100vw;
     height: 100%;
+    display: flex;
+    flex-direction: row;
+    
+}
+.about-me-professional{
+    height: 100%;
+    padding: 10px;
+    width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
     grid-template-areas: 
-    'hook points'
-    'personal points'
+    'profess-header profess-header'
+    'profess-hook profess-hook'
+    'profess-bullets experience'
+    'profess-bullets experience'
+    'profess-bullets experience'
+    'profess-bullets experience'
     ;
 }
+.about-me-pro-header{
+    grid-area: profess-header;
+    text-align: center;
+    text-decoration: underline;
+    margin: 0;
+    padding: 0;
+}
 .about-me-hook{
-    grid-area: hook;
-    background-color: aqua;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    overflow: hidden;
+    grid-area: profess-hook;
+    text-align: left;
+    text-indent: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 16px;
 }
-.about-me-hook > p{
-    
-}
-
 .about-me-points{
-    grid-area: points;
-    background-color: bisque;
+    grid-area: profess-bullets;
     display: flex;
+    width: 100%;
     flex-direction: column;
-    
+}
+.about-me-points > h3{
+    text-align: center;
+    padding: 5px;
+    margin: 0;
 }
 .bullet-points{
-    width: 100%;
-    height: 100%;
-    flex-direction: row;
     display: flex;
+    border-right: 1px solid black;
+    flex-direction: row;
+    padding: 10px;
+    flex-wrap: wrap;
+    height: 100%;
 }
-.about-me-personal{
-    grid-area: personal;
-    background-color: brown;
+.bullet-point{
+    display: flex;
+    min-width: 50%;
+    flex-direction: row;
+    padding-top: 10px;
+    font-size: 18px;
+}
+.bullet-point > div{
+    padding-left: 4px;
+}
+.about-me-experience{
+    grid-area: experience;
+    display: flex;
+    flex-direction: column;
+}
+.about-me-experience > h3{
+    text-align: center;
+    padding: 5px;
+    margin: 0;
+}
+.experience-point{
+    text-align: center;
+    padding: 5px;
+    margin: 0;
+}
+.experience-point > h4{
+    text-align: center;
+    padding: 5px;
+    padding-top: 15px;
+    margin: 0;
+}
+.experience-point > div:nth-child(3){
+    font-size: 12px;
 }
 
+
+.about-me-personal{
+    width: 100%;
+    height: 100%;
+    border-left: 8px double black;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.personal-header{
+    text-align: center;
+    text-decoration: underline;
+    margin:0;
+    padding: 0;
+    padding-bottom: 10px;
+}
+.personal-p{
+     text-indent: 20px;
+     padding: 5px;
+}
+.slideshow-container{
+    background-color: #000000;
+    height: 70%;
+    width: 100%;
+}
 /* Projects */
     /* Desktop */
 .projects-container{

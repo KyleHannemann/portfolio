@@ -45,6 +45,7 @@ function App() {
       <Navbar set_mobile_menu_active={set_mobile_menu_active} active={currentPage} mobile_active={mobile_menu_active}/>
       {/* Intro */}
       <div id='intro' className='intro-container section'>
+      
         <div className='intro-container-left'>
           <div className='intro-words-container'>
           <div className='intro-phrase'>Hello, I am</div>
@@ -82,28 +83,47 @@ function App() {
           <span></span>
         </div>
         <div className='section-container about-me'>
-          <div className='about-me-hook'>
-            <h2>Kyle Hannemann</h2>
-              <p> 
-         I am a highly motivated up-and-coming software developer. I love difficult puzzles and problem solving, so when I began learning programming I became obsessed. I am goal oriented and thrive off of overcoming challenges to achieve a desired result. I crave knowledge and feedback in order to continuously improve my skills as a developer.  
-              </p>
-          </div>
-          <div className='about-me-points'>
-            <h2>Why work with me?</h2>
-            <div className='bullet-points'>
-            {['Team Player', 'Self-Starter', 'Reliable', 'Resourceful', 'Versatile', 'Results Driven', 'Clear Communicator'].map((reason)=>{
-                return(
-                  <div>
-                    <div><BsCheck2Circle/></div>
-                    <div>{reason}</div>
-                  </div>
-                )
-              })}
+          <div className='about-me-professional'>
+            <h2 className='about-me-pro-header'>Professional</h2>
+            <div className='about-me-hook'>
+                <p> 
+                  I am a highly motivated software developer who loves to solve difficult problems. I am goal oriented and thrive off of overcoming challenges to achieve a desired result. I crave knowledge and feedback in order to continuously improve my skills.  
+                </p>
             </div>
-              
+            <div className='about-me-points'>
+              <h3>Why work with me?</h3>
+              <div className='bullet-points'>
+              {['Team Player', 'Self-Starter', 'Reliable', 'Resourceful', 'Versatile', 'Results Driven', 'Clear Communicator'].map((reason)=>{
+                  return(
+                    <div className='bullet-point'>
+                      <div style={{color:'green'}}><BsCheck2Circle/></div>
+                      <div>{reason}</div>
+                    </div>
+                  )
+                })}
+              </div>
+                
+            </div>
+            <div className='about-me-experience'>
+              <h3>Experience</h3>
+                <div className='experience-point'>
+                  <h4>Nature's Sunshine</h4>
+                  <div>DevOps Engineer</div>
+                  <div>August 2021 - Present</div>
+                </div>
+                <div className='experience-point'>
+                  <h4>Devmountain</h4>
+                  <div>Full Stack Web Development Program</div>
+                  <div>March 2021 - July, 2021</div>
+                </div>
+            </div>
           </div>
+          
           <div className='about-me-personal'>
-
+            <h2 className='personal-header'>Personal</h2>
+            <div className='slideshow-container'>
+            </div>
+            <p className='personal-p'>I am a husband and father. My wife, Natasha, and I have 2 children, R.J. and Naomi. My family is my top priority and I love spending time with them. I enjoy playing all kinds of games and spending time outside.</p>
           </div>
         </div>
       </div>
